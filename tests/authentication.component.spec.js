@@ -30,7 +30,7 @@ describe('Component Tests', () => {
       assert(service.save).toHaveBeenCalledWith('myPassword');
     });
 
-    test('should set success to OK upon success', function() {
+    test('should set success to OK upon success', function () {
       // GIVEN
       comp.password = comp.confirmPassword = 'myPassword';
 
@@ -43,7 +43,7 @@ describe('Component Tests', () => {
       expect(comp.success).toBe('OK');
     });
 
-    test('should notify of error if change password fails', function() {
+    test('should notify of error if change password fails', function () {
       // GIVEN
       comp.password = comp.confirmPassword = 'myPassword';
 
@@ -54,6 +54,8 @@ describe('Component Tests', () => {
       assert(comp.doNotMatch).toBeNull();
       assert(comp.success).toBeNull();
       assert(comp.error).toBe('ERROR');
+
+
     });
   });
 });
